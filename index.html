@@ -201,7 +201,7 @@
       <li><a href="#about"><span>9</span>お約束とライセンス</a></li>
     </ul>
   </nav>
-  <p style="margin:0;font-size:14px;color:var(--metal)">印刷用の PDF 版：<a href="BGM_DECK_manual.pdf" style="color:var(--amber)">BGM_DECK_manual.pdf</a></p>
+  <p class="pdf-link" style="margin:0;font-size:14px;color:var(--metal)">印刷用の PDF 版：<a href="BGM_DECK_manual.pdf" style="color:var(--amber)">BGM_DECK_manual.pdf</a></p>
 
   <section id="install">
     <h2><span class="no">1</span>インストール</h2>
@@ -347,6 +347,16 @@
   <section id="sampler">
     <h2><span class="no">7</span>サンプラー</h2>
     <p>9 個のパッドで効果音を鳴らします。BGM は止まらず、上に重なって鳴ります。パッドは指が触れた瞬間に鳴り、オレンジに光ります。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>さわり方</th><th>はたらき</th></tr></thead>
+        <tbody>
+          <tr><td>タップ</td><td>1 回鳴ります。同じパッドを連打すると、音が重なって鳴ります。</td></tr>
+          <tr><td>長押し</td><td>鳴っている音がそのままループ（くり返し）になります。ループ中のパッドは光り続け、下に「LOOP」と出ます。</td></tr>
+          <tr><td>ループ中にタップ</td><td>そのパッドのループが止まります。</td></tr>
+        </tbody>
+      </table>
+    </div>
     <div class="pads" aria-label="最初から入っている音">
       <div>AIR HORN</div><div>SIREN</div><div>LASER</div>
       <div>BOMB</div><div>SHOT</div><div>RISER</div>
@@ -357,21 +367,41 @@
       <table>
         <thead><tr><th>ボタン</th><th>はたらき</th></tr></thead>
         <tbody>
-          <tr><td><span class="key">STOP</span></td><td>鳴っているパッドの音を全部止めます。</td></tr>
+          <tr><td><span class="key">STOP</span></td><td>鳴っているパッドの音を、ループも含めて全部止めます。</td></tr>
           <tr><td>PAD VOL</td><td>パッドだけの音量。BGM の音量とは別です。</td></tr>
-          <tr><td><span class="key">EDIT</span></td><td>ON にしてパッドをタップすると、音を変えるメニューが出ます。</td></tr>
+          <tr><td><span class="key">EDIT</span></td><td>ON にしてパッドをタップすると、編集メニュー（音・名前・ピッチ・スピード）が出ます。</td></tr>
         </tbody>
       </table>
     </div>
     <div class="sub">
-      <h3>パッドの音を変える</h3>
+      <h3>パッドを編集する</h3>
       <ol>
         <li><span class="key">EDIT</span> を ON にします（パッドのふちがオレンジになります）。</li>
-        <li>変えたいパッドをタップし、「音を変える（ファイルを選ぶ）」を選びます。</li>
-        <li>スマホの中の音声ファイル（mp3、wav など。15MB まで）を選びます。パッドの名前はファイル名になります。</li>
-        <li>元に戻すときは、同じメニューの「最初の音に戻す」を選びます。</li>
+        <li>編集したいパッドをタップすると、メニューが出ます。</li>
         <li>終わったら <span class="key">EDIT</span> を OFF にします。</li>
       </ol>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>メニュー</th><th>できること</th></tr></thead>
+          <tbody>
+            <tr><td>音を変える</td><td>スマホの中の音声ファイル（mp3、wav、m4a など。15MB・30 秒まで）を選びます。パッドの名前はファイル名になります。</td></tr>
+            <tr><td>名前を変える</td><td>パッドに表示する名前を、16 文字まで自由に付けられます。</td></tr>
+            <tr><td>ピッチ・スピード</td><td>2 本のスライダーで、音の高さと速さを別々に変えます（下を参照）。</td></tr>
+            <tr><td>試しに鳴らす</td><td>いまの音を確認します。</td></tr>
+            <tr><td>最初の状態に戻す</td><td>音・名前・ピッチ・スピードを、まとめて最初に戻します。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="sub">
+      <h3>ピッチとスピード</h3>
+      <ul>
+        <li><strong>ピッチ</strong>（音の高さ）：−12〜＋12。半音きざみで、12 で 1 オクターブです。スピードは変わりません。</li>
+        <li><strong>スピード</strong>：50〜200%。5% きざみです。音の高さは変わりません。ドラムパターンのテンポを曲に合わせるときに便利です。</li>
+        <li>スライダーから指を離すと、その設定で音を作り直してから鳴ります。長い音は少し待ちます。</li>
+        <li>変えたパッドには、下に「P+3 120%」のように表示が出ます。<span class="key">元に戻す</span> でピッチ 0・スピード 100% に戻ります。</li>
+        <li>大きく変えるほど、音が少しにじんだりザラついたりします。</li>
+      </ul>
     </div>
     <div class="note">
       <strong>知っておくと便利なこと</strong>
@@ -379,7 +409,8 @@
       ・サンプラー用の音は <span class="path">Music/BGM</span> の外（たとえば <span class="path">Download</span>）に置いてください。<span class="path">Music/BGM</span> の中に置くと、BGM の曲として一覧に出てしまいます。<br>
       ・Bluetooth スピーカーでは、パッドを押してから音が出るまで 0.1〜0.3 秒ほど遅れます。スピーカー側の仕組みによるものです。<br>
       ・パッドの音はイコライザーを通らず、スペクトラムにも出ません。<br>
-      ・10 秒をこえる長い音は、途中で切れることがあります。</p>
+      ・ループをきれいにつなげたいときは、ちょうど 1 小節などで切った音を使うと、つなぎ目が目立ちません。<br>
+      ・30 秒をこえる音は、はじめの 30 秒だけを使います。</p>
     </div>
   </section>
 
@@ -410,6 +441,7 @@
         <summary>パッドを押しても鳴らない</summary>
         <p>・<span class="key">EDIT</span> が ON になっていると、パッドは鳴らずにメニューが出ます。OFF にしてください。<br>
         ・PAD VOL が一番下になっていないか確かめてください。<br>
+        ・ループ中のパッドをタップすると、鳴らずにループが止まります。<br>
         ・はじめてサンプラーを開いた直後は、音の準備に数秒かかります。</p>
       </details>
     </div>
@@ -427,7 +459,7 @@
     </ul>
   </section>
 
-  <footer>BGM DECK 取扱説明書　v0.6 対応</footer>
+  <footer>BGM DECK 取扱説明書　v0.7 対応</footer>
 </div>
 
 </body>
