@@ -248,6 +248,28 @@
       <li>曲はアプリにコピーされません。スマホの中のファイルをそのまま再生します。</li>
       <li>曲を足したら、アプリの <span class="key">再読込</span> を押します。</li>
     </ul>
+    <div class="sub" id="formats">
+      <h3>使えるファイルの種類</h3>
+      <p>BGM の曲にも、サンプラーのパッドの音にも、同じ種類のファイルが使えます。</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>形式</th><th>ファイルの名前の最後（拡張子）</th><th>メモ</th></tr></thead>
+          <tbody>
+            <tr><td>MP3</td><td><code>.mp3</code></td><td>いちばん一般的な形式。</td></tr>
+            <tr><td>AAC</td><td><code>.m4a</code> <code>.aac</code> <code>.mp4</code></td><td>iTunes や多くの録音アプリの形式。</td></tr>
+            <tr><td>WAV</td><td><code>.wav</code></td><td>圧縮していない音。サンプラーの素材に向いています。</td></tr>
+            <tr><td>FLAC</td><td><code>.flac</code></td><td>音質を落とさずに圧縮した形式。</td></tr>
+            <tr><td>Ogg Vorbis / Opus</td><td><code>.ogg</code> <code>.opus</code></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">
+        <strong>使えないもの・機種によって動かないもの</strong>
+        <p>・WMA（<code>.wma</code>）、AIFF（<code>.aif</code> <code>.aiff</code>）は使えません。MP3 などに変換してから入れてください。<br>
+        ・コピー防止が付いた曲（昔の iTunes Store の <code>.m4p</code> など）や、音楽配信アプリでダウンロードした曲は再生できません。<br>
+        ・Apple Lossless（ALAC、<code>.m4a</code>）は、スマホの機種によっては再生できないことがあります。</p>
+      </div>
+    </div>
   </section>
 
   <section id="screen">
@@ -384,7 +406,7 @@
         <table>
           <thead><tr><th>メニュー</th><th>できること</th></tr></thead>
           <tbody>
-            <tr><td>音を変える</td><td>スマホの中の音声ファイル（mp3、wav、m4a など。15MB・30 秒まで）を選びます。パッドの名前はファイル名になります。</td></tr>
+            <tr><td>音を変える</td><td>スマホの中の音声ファイルを選びます（使える種類は「<a href="#formats" style="color:var(--amber)">使えるファイルの種類</a>」を参照。15MB・30 秒まで）。パッドの名前はファイル名になります。</td></tr>
             <tr><td>名前を変える</td><td>パッドに表示する名前を、16 文字まで自由に付けられます。</td></tr>
             <tr><td>ピッチ・スピード</td><td>2 本のスライダーで、音の高さと速さを別々に変えます（下を参照）。</td></tr>
             <tr><td>試しに鳴らす</td><td>いまの音を確認します。</td></tr>
@@ -420,6 +442,7 @@
       <details>
         <summary>ジャンルや曲が出てこない</summary>
         <p>・フォルダが <span class="path">Music/BGM/ジャンル名/</span> の形になっているか確かめてください。<br>
+        ・使えない種類のファイル（WMA など）は一覧に出ません。「使えるファイルの種類」を見てください。<br>
         ・曲を入れたばかりのときは、<span class="key">再読込</span> を押します。それでも出ないときは、スマホを再起動すると Android が曲を見つけ直します。<br>
         ・「音楽とオーディオ」へのアクセスが許可されているか、スマホの「設定」→「アプリ」→「BGM DECK」→「権限」で確かめてください。</p>
       </details>
